@@ -1,0 +1,48 @@
+# Spring Boot configuration
+spring:
+
+  # Database
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: root
+    max-active: 20
+    max-idle: 8
+    min-idle: 8
+    max-wait: 10000
+    min-evictable-idle-time-millis: 1000
+
+  # JPA properties
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+    generate-ddl: true
+
+  # Flyway configuration
+  flyway:
+    url: jdbc:postgresql://localhost:5432/postgres
+    schemas: public
+    user: "postgres"
+    password: "root"
+    baseline-on-migrate: true
+    baseline-version: 1
+
+  # Logger configuration
+  logging:
+    pattern:
+      console: "%d %-5level %logger : %msg%n"
+    level:
+      org.springframework: info
+      org.hibernate: debug
+
+  # Server configuration
+  server:
+    port: 8080
+
+jwt.header: Authorization
+jwt.secret: mySecret

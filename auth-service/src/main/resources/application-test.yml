@@ -1,0 +1,31 @@
+# Spring Boot configuration
+spring:
+
+  # Database
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: root
+    max-active: 5
+    max-idle: 4
+    min-idle: 4
+    max-wait: 10000
+    min-evictable-idle-time-millis: 1000
+
+  # JPA properties
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+    generate-ddl: true
+
+# Server configuration
+server:
+  port: 8888
+
+jwt.secret: mySecret
+jwt.expiration: 604800

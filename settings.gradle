@@ -1,0 +1,9 @@
+rootProject.name = 'blogbox'
+include 'common'
+include 'admin-gateway'
+include 'member-gateway'
+include 'auth-service'
+include 'blog-service'
+include 'blog-service-client'
+include 'auth-service-client'
+

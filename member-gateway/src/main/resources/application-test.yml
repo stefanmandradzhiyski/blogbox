@@ -1,0 +1,14 @@
+# Server configuration
+server:
+  port: 8084
+
+# Spring exclude data sources
+spring:
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+      - org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration
+
+# JWT configuration
+jwt.header: Authorization
+jwt.secret: mySecret

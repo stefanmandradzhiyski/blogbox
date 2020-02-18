@@ -1,0 +1,25 @@
+plugins {
+    id 'org.springframework.boot'
+    id 'io.spring.dependency-management'
+    id 'java'
+}
+
+group = 'com.snmi'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+    mavenCentral()
+    maven { url 'http://oss.jfrog.org/artifactory/oss-snapshot-local/' }
+}
+
+dependencies {
+    implementation ('org.springframework.boot:spring-boot-starter-web')
+    implementation ('org.springframework.boot:spring-boot-starter-security')
+    compile ('io.springfox:springfox-swagger2:3.0.0-SNAPSHOT')
+    compile ('io.springfox:springfox-swagger-ui:3.0.0-SNAPSHOT')
+    compile ('io.springfox:springfox-spring-webflux:3.0.0-SNAPSHOT')
+    compile project (':common')
+    compile project (':blog-service-client')
+    compile project (':auth-service-client')
+}
