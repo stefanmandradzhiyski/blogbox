@@ -1,6 +1,16 @@
 # blogbox
 
-Tech-stack: Java 11, Spring Boot, Spring Data, Spring Security, Spring WEB, Hibernate, PostgreSQL, Flyway, Gradle.
+Programming language: Java 11
+
+Framework: Spring
+
+ORM: Hibernate
+
+Database: PostgreSQL
+
+Building tool: Gradle
+
+Additional tools/libraries: Swagger, Flyway
 
 BlogBox is a news application that can be used by anyone. The application can be used without being registered, but its functionality will be limited in this way. Once registered, you are given full control over your personal profile, your news, favorites, likes and comments. The application offers the ability to build an administrative and user interface. There are 3 types of implemented roles: 
 User, Writer and Administrator. 
